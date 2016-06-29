@@ -1,0 +1,10 @@
+{
+  "name": "Hack the North 2016 Countdown",
+  "author": "Joey Pereira",
+  "js": [
+    "htn.js"
+  ],
+  "modifies": [
+    {"location": "center-top", "type": "content"}
+  ]
+}

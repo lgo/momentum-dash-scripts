@@ -1,0 +1,13 @@
+{
+  "name": "Text Shadow",
+  "author": "Joey Pereira",
+  "css": [
+    "text-shadow.js"
+  ],
+  "modifies": [
+    {"location": "center-top", "type": "style"},
+    {"location": "center-below", "type": "style"},
+    {"location": "center", "type": "style"},
+    {"location": "bottom", "type": "style"}
+  ]
+}
