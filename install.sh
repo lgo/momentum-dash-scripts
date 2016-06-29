@@ -29,8 +29,8 @@ for scriptname in "$@"; do
       fi
     done
   fi
-  sed -i "\|<title>New Tab</title>|a <meta name=\"installed-script\" content=\"$scriptname\">" ${MOMENTUM_PATH}/dashboard.html
   if ! grep -F "${scriptname}" ${MOMENTUM_PATH}/dashboard.html 1>/dev/null; then
+    sed -i "\|<title>New Tab</title>|a <meta name=\"installed-script\" content=\"$scriptname\">" ${MOMENTUM_PATH}/dashboard.html
     echo "Installed $scriptname"
   else
     echo "Updated $scriptname"
