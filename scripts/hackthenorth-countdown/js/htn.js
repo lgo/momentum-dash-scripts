@@ -3,15 +3,27 @@
 
   function setHtnTime() {
     var millisecondsLeft = (new Date("Sept. 16 2016, 15:00")) - (new Date());
-    var hoursLeft = Math.round(millisecondsLeft / 1000 / 60 / 60);
-    var daysLeft = Math.floor(hoursLeft / 24);
+    var secondsLeft = Math.round(millisecondsLeft / 1000) % 60;
+    var minutesLeft = Math.round(millisecondsLeft / 1000 / 60) % 60;
+    var hoursLeft = Math.round(millisecondsLeft / 1000 / 60 / 60) % 24;
+    var daysLeft = Math.floor(millisecondsLeft / 1000 / 60 / 60 / 24);
 
-    $("#htn-hours").text(hoursLeft - (daysLeft * 24));
+    $("#htn-hours").text(hoursLeft);
     $("#htn-days").text(daysLeft);
+    $("#htn-minutes").text(minutesLeft);
+    $("#htn-seconds").text(secondsLeft);
   }
 
-  $(function() {
-    $("#center-above").prepend("<h2><span id='htn-days'></span> days and <span id='htn-hours'></span> hours until Hack the North\!</h2>");
+  $(() => {
+    $("#center-above").prepend(`
+      <h2>
+        <span id='htn-days'></span> days,
+        <span id='htn-hours'></span> hours,
+        <span id='htn-minutes'></span> minutes,
+        and <span id='htn-seconds'></span> seconds
+        until Hack the North!
+      </h2>
+    `);
 
     setHtnTime();
     setInterval(setHtnTime, 1000);
