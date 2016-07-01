@@ -1,9 +1,18 @@
 #!/bin/bash
+set -e
 
-HARDCODED_EXTENSIONS_FOLDER=~/.config/chromium/Default/Extensions
+case "$OSTYPE" in
+  linux*)  CHROME_USER_FOLDER="~/.config/chromium/Default/Extensions" ;; 
+  darwin*)   CHROME_USER_FOLDER="~/Library/Application\ Support/Google/Chrome/Default/Extensions" ;;
+  *)        echo "unknown: $OSTYPE" ;;
+esac
+
+
+
+EXTENSIONS_FOLDER=${CHROM_USER_FOLDER}
 EXTENSION_ID=laookkfknpbbblfpciffpaejjkokdgca
-MOMENTUM_VERSION=$(ls ${HARDCODED_EXTENSIONS_FOLDER}/${EXTENSION_ID})
-MOMENTUM_PATH=${HARDCODED_EXTENSIONS_FOLDER}/${EXTENSION_ID}/${MOMENTUM_VERSION}
+MOMENTUM_VERSION=$(ls ${CHROME_USER_FOLDER}/${EXTENSION_ID})
+MOMENTUM_PATH=${CHROME_USER_FOLDER}/${EXTENSION_ID}/${MOMENTUM_VERSION}
 
 for scriptname in "$@"; do
   if ! [[ -d scripts/${scriptname} ]]; then
