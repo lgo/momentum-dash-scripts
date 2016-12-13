@@ -30,7 +30,7 @@
       </h2>
     `);
 
-    setHtnTime();
-    setInterval(setContdownTime, 1000);
+    setCountdownTime();
+    setInterval(setCountdownTime, 1000);
   })
 })();
