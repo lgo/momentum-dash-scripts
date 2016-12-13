@@ -2,8 +2,9 @@
   'use strict';
 
   // FIXME(xLegoz): Allow event and target to be cli arguments for script install
-  var countdownEvent = "Hack the North";
-  var countdownTarget = "Sept. 16 2016, 15:00";
+  var countdownEvent = "I start at Stripe";
+  // FIXME(xLegoz): Use smarter date parser.
+  var countdownTarget = "Jan. 9 2017, 12:00";
 
   function setCountdownTime() {
     var millisecondsLeft = (new Date(countdownTarget)) - (new Date());

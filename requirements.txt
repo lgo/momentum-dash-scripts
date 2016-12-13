@@ -1,0 +1,2 @@
+BeautifulSoup4==4.5.1
+mypy-lang==0.4.6
