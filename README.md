@@ -5,10 +5,10 @@ A script installer for Momentum Dashboard!
 
 Usage:
 ```
-./install.sh hackthenorth-countdown text-shadow
+./install.sh countdown text-shadow
 ```
 
 ## Scripts
 
-- Hack the North 2016 Countdown (`hackthenorth-countdown`)
+- Countdown (`countdown`)
 - Text Shadows (`text-shadow`)
