@@ -1,8 +1,8 @@
 {
-  "name": "Hack the North 2016 Countdown",
+  "name": "Countdown",
   "author": "Joey Pereira",
   "js": [
-    "htn.js"
+    "coundown.js"
   ],
   "modifies": [
     {"location": "center-top", "type": "content"}
