@@ -49,7 +49,7 @@ def get_files(path: str) ->  List[Tuple[str, str]]:
 
 class Widget(object):
 
-    def __init__(self, script_source: str):
+    def __init__(self, script_source: str) -> None:
         self.source = script_source
 
         # FIXME: if source is git repo, save to temp folder and make path that
@@ -58,18 +58,18 @@ class Widget(object):
         self.css_files = get_files(join(self.path, "css"))
         self.js_files = get_files(join(self.path, "js"))
 
-    def get_name():
+    def get_name(self):
         pass
 
-    def get_version():
+    def get_version(self):
         pass
 
-    def get_hash():
+    def validate(self):
         pass
 
 class WidgetManager(object):
 
-    def __init__(self, momentum_path: str):
+    def __init__(self, momentum_path: str) -> None:
         self.path = momentum_path
 
         with open(join(momentum_path, "dashboard.html"), mode='r') as file:
